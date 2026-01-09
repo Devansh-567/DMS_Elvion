@@ -23,17 +23,11 @@ export const HeroSection = () => {
               cy="50"
               r="45"
               fill="none"
-              stroke="url(#gradient1)"
+              stroke="hsl(var(--primary))"
               strokeWidth="1"
               strokeDasharray="10 5"
+              opacity="0.5"
             />
-            <defs>
-              <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="hsl(180, 100%, 50%)" />
-                <stop offset="50%" stopColor="hsl(280, 100%, 60%)" />
-                <stop offset="100%" stopColor="hsl(320, 100%, 60%)" />
-              </linearGradient>
-            </defs>
           </svg>
         </motion.div>
 
@@ -50,36 +44,30 @@ export const HeroSection = () => {
               cy="50"
               r="45"
               fill="none"
-              stroke="hsl(280, 100%, 60%)"
+              stroke="hsl(var(--secondary))"
               strokeWidth="1"
               strokeDasharray="5 10"
-              opacity="0.5"
+              opacity="0.3"
             />
           </svg>
         </motion.div>
 
         {/* Center icon */}
         <div className="relative w-20 h-20 flex items-center justify-center">
-          <motion.div
-            className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-accent/20"
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
+          <div className="absolute inset-0 rounded-full bg-primary/10" />
           <Shield className="w-10 h-10 text-primary relative z-10" />
         </div>
       </motion.div>
 
-      {/* Title */}
+      {/* Title - Solid, professional look */}
       <motion.h1
-        className="font-display text-5xl md:text-7xl font-black mb-4"
+        className="font-display text-5xl md:text-7xl font-black mb-4 tracking-tight"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
       >
-        <span className="neon-text">DMS</span>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-accent to-secondary">
-          4096
-        </span>
+        <span className="text-primary">DMS</span>
+        <span className="text-secondary">4096</span>
       </motion.h1>
 
       {/* Subtitle */}
