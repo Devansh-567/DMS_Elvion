@@ -6,10 +6,9 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Lock, Unlock, FileText, Upload, Sparkles } from 'lucide-react';
 
-import { ParticleBackground } from '@/components/ParticleBackground';
+
 import { HeroSection } from '@/components/HeroSection';
 import { EncryptionPipeline } from '@/components/EncryptionPipeline';
-import { KeyVisualizer } from '@/components/KeyVisualizer';
 import { StatsPanel } from '@/components/StatsPanel';
 import { CipherOutput } from '@/components/CipherOutput';
 import { FileUploadZone } from '@/components/FileUploadZone';
@@ -160,11 +159,8 @@ const Index = () => {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Animated background */}
-      <ParticleBackground />
-
-      {/* Cyber grid overlay */}
+    <div className="relative min-h-screen overflow-hidden bg-background">
+      {/* Subtle grid overlay */}
       <div className="fixed inset-0 cyber-grid pointer-events-none z-0" />
 
       {/* Main content */}
@@ -282,20 +278,11 @@ const Index = () => {
 
             {/* Right Column - Visualizations & Stats */}
             <div className="space-y-6">
-              {/* Key Visualizer */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 }}
-              >
-                <KeyVisualizer isActive={isProcessing} progress={progress} />
-              </motion.div>
-
               {/* Security Heatmap */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.45 }}
+                transition={{ delay: 0.4 }}
               >
                 <SecurityHeatmap inputText={inputText} isProcessing={isProcessing} />
               </motion.div>
