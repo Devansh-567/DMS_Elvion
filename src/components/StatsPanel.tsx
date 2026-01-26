@@ -76,39 +76,7 @@ export const StatsPanel = ({ inputSize, outputSize, processingTime, isProcessing
         ))}
       </div>
 
-      {/* Security Gauge */}
-      <div className="glass-card p-4 rounded-lg">
-        <div className="flex items-center justify-between mb-3">
-          <span className="text-xs text-muted-foreground uppercase tracking-wider">
-            Encryption Strength
-          </span>
-          <span className="font-display text-xs text-neon-green">256-BIT AES</span>
-        </div>
-        
-        <div className="relative h-3 bg-muted/30 rounded-full overflow-hidden">
-          <motion.div
-            className="absolute inset-y-0 left-0 bg-gradient-to-r from-neon-green via-primary to-secondary rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: '100%' }}
-            transition={{ duration: 1, delay: 0.5 }}
-          />
-          {isProcessing && (
-            <motion.div
-              className="absolute inset-y-0 left-0 w-8 bg-white/30 rounded-full"
-              animate={{ x: [0, 300, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-            />
-          )}
-        </div>
-        
-        <div className="flex justify-between mt-2 text-[10px] text-muted-foreground">
-          <span>WEAK</span>
-          <span>MODERATE</span>
-          <span>STRONG</span>
-          <span className="text-neon-green font-bold">UNBREAKABLE</span>
-        </div>
-      </div>
-
+      
       {/* Algorithm Details */}
       <div className="glass-card p-4 rounded-lg space-y-2">
         <h4 className="font-display text-xs text-primary uppercase tracking-wider mb-3">

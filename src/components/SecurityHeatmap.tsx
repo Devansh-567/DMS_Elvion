@@ -51,10 +51,10 @@ export const SecurityHeatmap = ({ inputText, isProcessing }: SecurityHeatmapProp
     return (
       <div className="glass-card rounded-lg p-4">
         <h3 className="font-display text-sm text-primary uppercase tracking-wider mb-3">
-          Security Heatmap
+          System use Heatmap
         </h3>
         <div className="text-center py-8 text-muted-foreground text-sm">
-          Enter data to visualize encryption impact
+          Enter data to visualize system impact
         </div>
       </div>
     );
@@ -64,7 +64,7 @@ export const SecurityHeatmap = ({ inputText, isProcessing }: SecurityHeatmapProp
     <div className="glass-card rounded-lg p-4">
       <div className="flex items-center justify-between mb-3">
         <h3 className="font-display text-sm text-primary uppercase tracking-wider">
-          Security Heatmap
+          System use Heatmap
         </h3>
         <span className="text-[10px] text-muted-foreground">
           {inputText.length} chars analyzed
@@ -93,11 +93,11 @@ export const SecurityHeatmap = ({ inputText, isProcessing }: SecurityHeatmapProp
       <div className="flex justify-between text-[10px]">
         <div className="flex items-center gap-1">
           <div className="w-2 h-2 rounded-sm bg-destructive" />
-          <span className="text-muted-foreground">Low Impact</span>
+          <span className="text-muted-foreground">Rest</span>
         </div>
         <div className="flex items-center gap-1">
           <div className="w-2 h-2 rounded-sm bg-neon-green" />
-          <span className="text-muted-foreground">High Impact</span>
+          <span className="text-muted-foreground">Usage</span>
         </div>
       </div>
     </div>
