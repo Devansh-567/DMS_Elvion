@@ -163,8 +163,8 @@ npm -v    # v9+
 
 ## Installation
 ```bash
-git clone https://github.com/Devansh-567/DMS.git
-cd DMS
+git clone https://github.com/Devansh-567/DMS_Elvion.git
+cd DMS_Elvion
 npm install
 npm start
 ```
