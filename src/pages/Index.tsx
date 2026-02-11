@@ -315,7 +315,8 @@ const Index = () => {
               DMS4096 • AES-256-CBC • PBKDF2-SHA256 • 100,000 Iterations
             </p>
             <p className="text-muted-foreground/50 text-xs mt-2">
-              Built for Hackathon 2024 • Zero-Knowledge Client-Side Encryption
+              © DMS Team 2024–2026. Proprietary technology. All rights reserved.
+
             </p>
           </motion.div>
         </div>
